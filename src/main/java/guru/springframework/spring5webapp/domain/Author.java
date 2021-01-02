@@ -1,6 +1,7 @@
 package guru.springframework.spring5webapp.domain;
 
 import javax.persistence.*;
+import java.util.Objects;
 import java.util.Set;
 
 @Entity
@@ -64,7 +65,7 @@ public class Author {
 
         Author author = (Author) o;
 
-        return id != null ? id.equals(author.id) : author.id == null;
+        return Objects.equals(id, author.id);
     }
 
     @Override
